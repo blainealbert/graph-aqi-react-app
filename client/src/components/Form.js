@@ -22,17 +22,15 @@ function Form(props) {
     }, []);
 
     let getForecast = (e) => {
-        e.preventDefault();  
-        fetch(`/forecast?city=${e.target.city.value}`)      
-        //axios.get(`${process.env.REACT_APP_AQI_API_URL}/feed/${e.target.city.value}/?token=${process.env.REACT_APP_API_KEY}`)
-        .then(res => res.json())
-        .then(data => {
-                console.log(data.data.status);
-                if(data.data.status === "error"){
+        e.preventDefault();        
+        axios.get(`${process.env.REACT_APP_AQI_API_URL}/feed/${e.target.city.value}/?token=${process.env.REACT_APP_API_KEY}`)
+            .then(res => {
+                console.log(res.data.status);
+                if(res.data.status === "error"){
                     props.handleFeedUpdate(null);
                     props.setIsInfoAvailable(false);
                 } else{
-                    props.handleFeedUpdate(data.data.data);
+                    props.handleFeedUpdate(res.data.data);
                     props.setIsInfoAvailable(true);
                 }
                 

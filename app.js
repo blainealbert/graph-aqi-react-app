@@ -6,7 +6,6 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var citiesRouter = require('./routes/cities');
-var forecastRouter = require('./routes/forecast');
 
 var app = express();
 
@@ -29,7 +28,6 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/cities', citiesRouter);
-app.use('/forecast', forecastRouter);
 
 // the "catchall" handler to forward unavailable requests to the index
 app.get('*', (req, res) => {
