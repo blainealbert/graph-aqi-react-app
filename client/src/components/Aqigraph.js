@@ -1,6 +1,4 @@
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, ReferenceLine, ReferenceArea,
-    ReferenceDot, Tooltip, CartesianGrid, Legend, Brush, ErrorBar, AreaChart, Area,
-    Label, LabelList } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Label } from 'recharts';
 
 function Aqigraph(props) {
 
@@ -14,7 +12,7 @@ function Aqigraph(props) {
                         <h2>PM2.5</h2>
                         <div className="aqigraph__data">
 
-                            <LineChart width={600} height={350} style={{margin: "0 auto", textAlign: "center"}} data={props.dailyForecast.pm25.slice(0,3)}>
+                            <LineChart width={600} height={350} style={{margin: "0 auto", textAlign: "center"}} data={props.dailyForecast.pm25.slice(0,4)}>
                                 <XAxis dataKey="day" height={40}>
                                     <Label value="Date" offset={0} position="insideBottom" />
                                 </XAxis>
@@ -32,7 +30,7 @@ function Aqigraph(props) {
                         <h2>PM10</h2>
                         <div className="aqigraph__data">
 
-                            <LineChart width={600} height={350} style={{margin: "0 auto", textAlign: "center"}} data={props.dailyForecast.pm10.slice(0,3)}>
+                            <LineChart width={600} height={350} style={{margin: "0 auto", textAlign: "center"}} data={props.dailyForecast.pm10.slice(0,4)}>
                                 <XAxis dataKey="day" height={40}>
                                     <Label value="Date" offset={0} position="insideBottom" />
                                 </XAxis>
@@ -50,7 +48,7 @@ function Aqigraph(props) {
                         <h2>O3</h2>
                         <div className="aqigraph__data">
 
-                            <LineChart width={600} height={350} style={{margin: "0 auto", textAlign: "center"}} data={props.dailyForecast.o3.slice(0,3)}>
+                            <LineChart width={600} height={350} style={{margin: "0 auto", textAlign: "center"}} data={props.dailyForecast.o3.slice(0,4)}>
                                 <XAxis dataKey="day" height={40}>
                                     <Label value="Date" offset={0} position="insideBottom" />
                                 </XAxis>
