@@ -1,0 +1,97 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body{
+  background: #fff;
+  background-image: linear-gradient(to bottom, #fff, #fff, #31bf24);
+  color: #222;
+  background-repeat: no-repeat;
+}
+
+nav{}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+button{
+  padding: 10px;
+  background-color: #61ce57;
+  color: #fff;
+  border-radius: 6px;
+  border-color: #ccc;
+  font-weight: 600;
+  transition: 0.5s all;
+}
+button:hover{
+  background-color: #fff;
+  color: #61ce57;
+
+}
+
+input{
+  padding: 8px;
+  margin: 0 10px;
+}
+
+.card{
+  margin: 30px auto;
+  width: 800px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.apigraph{
+  margin-bottom: auto;
+}
+
+.fadeIn{
+  animation: fadeIn 1s;
+}
+
+footer{
+  justify-self: flex-end;
+  margin-top: auto;
+}
+
+footer > div{
+  margin-top: 30px;
+}
+
+.auto-complete{
+  position: absolute;
+  z-index: 100;
+  top: calc(100% - 15px);
+  list-style: none;
+  right: 0;
+  padding: 10px;
+  width: 165px;
+}
+
+.auto-complete li{
+  padding: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  margin-bottom: -1px;
+  text-align: left;
+  transition: all 0.25s linear;
+}
+
+.auto-complete li:hover{
+  background-color: #ccc;
+  color: #fff;
+}
