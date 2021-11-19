@@ -9,7 +9,7 @@
 
 body{
   background: #fff;
-  background-image: linear-gradient(to bottom, #fff, #fff, #31bf24);
+  /* background-image: linear-gradient(to bottom, #fff, #fff, #31bf24); */
   color: #222;
   background-repeat: no-repeat;
 }
@@ -52,10 +52,12 @@ input{
   border: 2px solid #ccc;
   border-radius: 6px;
   background-color: #fff;
+  max-width: 100%;
 }
 
 .apigraph{
   margin-bottom: auto;
+  max-width: 100%;
 }
 
 .fadeIn{
