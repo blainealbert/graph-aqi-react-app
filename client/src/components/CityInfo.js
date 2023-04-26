@@ -1,5 +1,3 @@
-import {useState} from 'react';
-
 function CityInfo(props) {
     // const [c]
 
